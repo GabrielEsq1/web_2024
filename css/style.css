@@ -143,11 +143,84 @@ header {
   .top-bar .search-icon {
     text-align: right; }
 
-.navbar .container > div {
-  border-bottom: 1px solid #e6e6e6; }
-  @media (max-width: 767.98px) {
-    .navbar .container > div {
-      border-bottom: none; } }
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Set the height of the navbar */
+  z-index: 1000; /* Ensure the navbar is on top of other elements */
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow to distinguish the navbar */
+  display: flex; /* Flexbox to align items correctly */
+  align-items: center; /* Center content vertically */
+  justify-content: space-between; /* Space between the navbar content */
+  padding: 0 20px; /* Padding on the sides */
+}
+
+/* Ensure the body content is pushed down and not hidden under the navbar */
+body {
+  padding-top: 70px; /* Adjust according to the navbar height */
+}
+
+/* Import the desired web font from Google Fonts (or any other source) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Example with Roboto */
+
+/* Apply the web font to the entire body */
+body {
+    font-family: 'Roboto', sans-serif; /* Use your preferred web font */
+    padding-top: 70px; /* Keep this to avoid content being hidden under the navbar */
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Set the height of the navbar */
+    z-index: 1000; /* Ensure the navbar is above other elements */
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    backdrop-filter: blur(10px); /* Optional: adds a slight blur effect to the background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
+    display: flex; /* Flexbox to align items correctly */
+    align-items: center; /* Center the content vertically */
+    justify-content: space-between; /* Space between the logo and the menu */
+    padding: 0 20px; /* Padding on the sides */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition when background changes */
+}
+
+/* Navbar Link Styles */
+.nav-link {
+    padding: 1rem; /* Adjust padding for the links */
+    font-size: 16px; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.05em; /* Adds spacing between letters */
+    color: #000; /* Default color of the links */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Change link color on hover */
+.nav-link:hover {
+    color: #007bff; /* You can choose any hover color (blue in this case) */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        height: 60px; /* Adjust height for smaller screens */
+    }
+
+    body {
+        padding-top: 60px; /* Adjust padding for mobile */
+    }
+
+    .nav-link {
+        padding: 0.5rem; /* Reduce padding for smaller screens */
+    }
+}
+
 
 .category {
   display: inline-block;

@@ -54,40 +54,48 @@ header {
 	.navbar {
 		padding-top: 0;
 		padding-bottom: 0;
-		background: transparent!important;
+		background: transparent!important; // Try avoiding !important unless necessary
+	
 		@include media-breakpoint-down(sm) {
-			background: lighten(#ccc, 10%)!important;
+			background: lighten(#ccc, 10%)!important; // Ensure media-breakpoint-down is defined
 		}
-		
+	
 		.navbar-nav {
 			&.absolute-right {
 				position: absolute;
 				right: 0;
 				@include media-breakpoint-down(md) {
-					position: relative;
-					right: inherit;
+					position: relative; // On smaller screens, reset positioning
+					right: inherit;   // Remove the right positioning on smaller screens
 				}
 			}
 		}
+	
 		.nav-link {
 			padding: 1.7rem 1rem;
 			font-size: 16px;
 			outline: none!important;
 			text-transform: uppercase;
 			letter-spacing: .05em;
+	
 			@include media-breakpoint-down(md) {
-				padding: 1.7rem 1rem;
+				padding: 1.7rem 1rem; // Padding for medium and down
 			}
 			@include media-breakpoint-down(sm) {
-				padding: .5rem 0rem;
+				padding: .5rem 0rem;  // Smaller padding for small screens
 			}
+	
 			&:hover {
+				// Uncomment if you need to define hover styles
 				// color: $white;
 			}
 			&.active {
+				// Uncomment if you need to define active link styles
 				// color: $white;
 			}
 		}
+	}
+	
 
 		.dropdown {
 			&.show {
